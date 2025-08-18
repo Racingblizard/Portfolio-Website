@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 10px;
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  background-color: #000000;
+}
+
+
+
+header{
+    margin-top: 20px;
+    top: 0;
+    left: 0;
+    width: 90%;
+    padding: 1rem 1%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 3rem;
+    color: #ff0000;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover{
+    transform: scale(1.5);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: rgb(255, 255, 255);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color: #ff0000;
+    border-bottom: 3px solid #ff0000;
+}
+.landing_page * {
+  font-family: Nunito, sans-serif;
+}
+.landing_page {
+  --primary-bg: #000000;
+  --secondary-bg: #000000;
+  --form-bg: #000000;
+  --input-bg: #000000;
+  --input-border: #ff0000;
+  --primary-text: #ff0000;
+  --secondary-text: #ff00009c;
+  --border-color: #ff0000;
+  --text-color: #ffffff;
+  --accent: #ff0000;
+  --button-bg: #ff0000;
+  --button-text: #ffffff;
+  background-color: var(--primary-bg);
+}
+
+/* Layout Containers */
+.landing_page .responsive-container-block.big-container {
+  background-color: black;
+  padding: 0 50px;
+  position: relative;
+}
+
+.landing_page .responsive-container-block.container {
+  max-width: 1320px;
+  margin: 60px auto;
+  position: relative;
+}
+
+.landing_page .responsive-container-block {
+  min-height: 75px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0 auto;
+}
+
+.landing_page .responsive-cell-block {
+  min-height: 75px;
+}
+
+/* Text Styling */
+.landing_page .text-blk {
+  margin: 0;
+  line-height: 25px;
+}
+
+.landing_page .text-blk.section-head {
+  font-size: 40px;
+  line-height: 55px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  max-width: 450px;
+  color: red;
+}
+
+.landing_page .text-blk.section-subhead {
+  font-size: 18px;
+  margin-bottom: 50px;
+  max-width: 420px;
+  color: red;
+}
+
+.landing_page .text-blk.contactus-head {
+  font-size: 30px;
+  line-height: 40px;
+  color: red;
+}
+
+.landing_page .text-blk.contactus-subhead {
+  font-size: 18px;
+  margin-bottom: 18px;
+  color: red;
+}
+
+/* Form Styles */
+.landing_page .form-box {
+  background-color: var(--form-bg);
+  color: var(--primary-text);
+  padding: 35px 33px;
+  max-width: 506px;
+}
+
+.landing_page .input,
+.landing_page .textinput {
+  width: 100%;
+  font-size: 18px;
+  background-color: var(--input-bg);
+  color: var(--primary-text);
+}
+
+.landing_page .input {
+  height: 50px;
+  padding: 1px 12.5px 1px 22.5px;
+  border-radius: 5px;
+  border: 2px solid var(--input-border);
+}
+
+.landing_page .textinput {
+  height: 233px;
+  padding: 22px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid var(--input-border);
+}
+
+/* Button */
+.landing_page .submit-btn {
+  width: 100%;
+  height: 56px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: 2px solid var(--button-bg);
+}
+
+/* Left / Right Blocks */
+.landing_page .responsive-cell-block.wk-desk-6.wk-ipadp-6.wk-tab-12.wk-mobile-12.left-one {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--primary-text);
+  background: var(--secondary-bg);
+}
+
+.landing_page .responsive-cell-block.wk-ipadp-6.wk-tab-12.wk-mobile-12.wk-desk-6.right-one {
+  display: flex;
+  justify-content: center;
+}
+
+.landing_page .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-6.wk-ipadp-6.emial {
+  padding-right: 0px;
+}
+
