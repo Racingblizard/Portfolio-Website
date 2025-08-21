@@ -304,17 +304,6 @@ footer{ background-color:#111; }
 
 /* ===== PROJECT CARDS ===== */
 /* You used both a class and a bare tag. Support both to "maintain the code". */
-.projectcards, projectcards{
-  display:flex; flex-wrap:wrap; justify-content:center; gap:2rem; padding:20px;
-}
-.projectcards img, projectcards img{
-  width:100%; max-width:350px; height:auto; border-radius:12px; object-fit:cover;
-}
+
 
 /* Custom elements styling kept as you wrote */
-h8{
-  color:#ff0000; font-size:2.5rem; font-weight:600; text-align:center; display:block;
-}
-p2, p3{
-  color:#ffffff; font-size:1.6rem; text-align:center; display:block;
-}

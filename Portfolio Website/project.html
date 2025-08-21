@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Gallery + Modal</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+  *{ margin:0; padding:0; box-sizing:border-box; text-decoration:none; border:none; outline:none; font-family:'Poppins',sans-serif; }
+
+  html{ font-size:62.5%; }
+  body{ width:100%; min-height:100vh; background-color:black; color:#fff; }
+
+  /* ===== HEADER ===== */
+  header{
+    margin-top:20px; position:fixed; top:0; left:0; width:100%;
+    padding:1rem 9%; background-color:transparent;
+    display:flex; justify-content:space-between; align-items:center;
+    z-index:100;
+  }
+  .logo{ font-size:3rem; color:#ff0000; font-weight:800; cursor:pointer; transition:.5s ease; }
+  .logo:hover{ transform:scale(1.1); }
+  .menu-btn{ display:none; font-size:3rem; background:transparent; color:#fff; cursor:pointer; }
+
+  nav a{ font-size:1.8rem; color:white; margin-left:4rem; font-weight:500; transition:.3s ease; border-bottom:3px solid transparent; }
+  nav a:hover, nav a.active{ color:#ff0000; border-bottom:3px solid #ff0000; }
+
+  @media(max-width:995px){
+    .menu-btn{ display:block; }
+    nav{
+      position:absolute; display:none; top:70px; right:0; width:80%;
+      border-left:3px solid #ff0000; border-bottom:3px solid #ff0000;
+      border-bottom-left-radius:2rem; padding:1.5rem; background-color:#161616;
+    }
+    nav.active{ display:block; }
+    nav a{ display:block; font-size:2rem; margin:2.2rem 0; }
+    nav a:hover, nav a.active{ padding:1rem; border-radius:.5rem; border-bottom:.5rem solid #ff0000; }
+  }
+
+  main{ padding-top:9rem; }
+
+  /* ===== PROJECT CARDS ===== */
+  h8{ color:#ff0000; font-size:2.5rem; font-weight:600; text-align:center; display:block; margin-bottom:2rem; }
+
+  .projectcards{
+    display:flex; flex-wrap:wrap; justify-content:center;
+    gap:2rem; padding:20px; max-width:1900px; margin:auto;
+  }
+  .projectcards img{
+    width:100%; max-width:450px; /* shrink on desktop */
+    height:auto; border-radius:12px; object-fit:cover;
+    cursor:pointer; box-shadow:0 4px 12px rgba(0,0,0,.3);
+    transition:transform .3s ease;
+  }
+  .projectcards img:hover{ transform:scale(1.03); }
+
+  /* Mobile shrink */
+  @media(max-width:768px){
+    .projectcards img{ max-width:90%; }
+  }
+
+  /* ===== MODAL (Fullscreen Image Viewer) ===== */
+  .modal{
+    display:none; position:fixed; inset:0;
+    z-index:1000; background:rgba(0,0,0,.95);
+    padding-top:60px; text-align:center;
+  }
+  .modal-content{
+    display:block; margin:auto;
+    max-width:95%; max-height:85vh;
+    border-radius:10px;
+  }
+  .close{
+    position:absolute; top:20px; right:35px;
+    color:#fff; font-size:40px; font-weight:bold; cursor:pointer;
+  }
+  .close:hover{ color:#ff0000; }
+
+  /* ===== FOOTER ===== */
+footer{ background-color:#111; }
+.footerContainer{ width:100%; padding:70px 30px 20px; }
+.socialIcons{ display:flex; justify-content:center; }
+.socialIcons a{
+  text-decoration:none; padding:10px; background:#000; margin:10px; border-radius:50%;
+}
+.socialIcons a i{ font-size:2em; color:black; opacity:0.9; }   /* fixed 0,9 */
+.socialIcons a:hover{ background:#fff; box-shadow:0 0 25px #ff0000; transition:.5s; }
+.socialIcons a:hover i{ color:white; transition:.5s; }
+
+.footerNav{ margin:30px 0; }
+.footerNav ul{ display:flex; justify-content:center; list-style-type:none; flex-wrap:wrap; }
+.footerNav ul li a{
+  color:white; margin:20px; text-decoration:none; font-size:2rem; opacity:.7; transition:.5s;
+}
+.footerNav ul li a:hover{ opacity:1; }
+.footerBottom{ background:#000; padding:20px; text-align:center; }
+.footerBottom p{ color:white; }
+.designer{ opacity:.7; text-transform:uppercase; letter-spacing:1px; font-weight:400; margin:0 5px; }
+  </style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="logo">Abraham</div>
+  <button class="menu-btn" id="menuBtn">☰</button>
+  <nav id="nav">
+    <a href="index.html">Home</a>
+    <a href="skills.html">Skills</a>
+    <a href="Resume for osaade abraham.docx">My Resume</a>
+    <a href="project.html" class="active">Projects</a>
+    <a href="Contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main>
+  <section>
+    <h8>Projects</h8>
+    <div class="projectcards">
+      <!-- 👉 PUT YOUR PROJECT IMAGES HERE -->
+      <img src="images/project 1.webp" alt="Project 1">
+      <img src="images/project 2.webp" alt="Project 2">
+    </div>
+  </section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footerContainer">
+    <div class="socialIcons">
+      <a href="https://discord.com/" target="_blank"><img src="icons/discord.png" alt="Discord"></a>
+      <a href="https://github.com/Racingblizard" target="_blank"><img src="icons/github.png" alt="GitHub"></a>
+      <a href="https://www.instagram.com/racingblizad" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a>
+      <a href="https://t.me/OsaadeAbraham" target="_blank"><img src="icons/telegram.png" alt="Telegram"></a>
+      <a href="https://wa.me/2347033294090" target="_blank"><img src="icons/whatsapp.png" alt="WhatsApp"></a>
+    </div>
+    <div class="footerNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="Resume for osaade abraham.docx">My Resume</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footerBottom">
+    <p>Copyright &copy;2025; Designed by <span class="designer">Osaade Abraham Oluwatobi</span></p>
+  </div>
+</footer>
+
+<!-- ===== MODAL (fullscreen image viewer) ===== -->
+<div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+
+<script>
+// ===== NAV TOGGLE =====
+const menuBtn=document.getElementById('menuBtn');
+const nav=document.getElementById('nav');
+menuBtn.addEventListener('click',()=>nav.classList.toggle('active'));
+
+// ===== MODAL SCRIPT =====
+const modal=document.getElementById("imageModal");
+const modalImg=document.getElementById("modalImg");
+const closeBtn=document.querySelector(".close");
+
+document.querySelectorAll(".projectcards img").forEach(img=>{
+  img.addEventListener("click",()=>{
+    modal.style.display="block";
+    modalImg.src=img.src; // show clicked image
+  });
+});
+
+closeBtn.onclick=()=>{ modal.style.display="none"; };
+modal.onclick=(e)=>{ if(e.target===modal){ modal.style.display="none"; } };
+</script>
+</body>
+</html>
